@@ -27,7 +27,7 @@ void *get_in_addr(struct sockaddr *sa)
 int main(int argc, char* argv[])
 {
     int HTTP_PORT = atoi(argv[1]);
-    char *path = argv[2];
+    char *path = argv[5];
 
     printf(path);
 
