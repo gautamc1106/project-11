@@ -61,9 +61,9 @@ void serve_get(Request * request, char * response, char * path) {
   getcwd(cwd,sizeof(cwd));
   strcpy(file_path,cwd);
 
+  strcat(file_path,"/");
   strcat(file_path,path);
-  strcat(file_path, request->http_uri);https://adclick.g.doubleclick.net/pcs/click?xai=AKAOjsst6pF0WQLRVcsNkpLdUDOeqcpcnCHJv1rrgBMO-LXS-2fAOkPkc4AVStW6EHRU-J4EjAWwC1e8vx6abqH0hEYBqZBO8MGnw3CzCILMWNdXfy5mG9hEMQjvrOIll3ZNyD-EdY_RddI&sig=Cg0ArKJSzDJ9WlKblp9T&urlfix=1&adurl=https://adclick.g.doubleclick.net:443/pcs/click%253Fxai%253DAKAOjsuf6oFmO5ym9gmGCBh9ECNur24ZN4aMnDt4lixyxlX-w7hkvPxjj-lyqhcg8HXybM5-s7nW1iFLvyyTQs2aeK80hkn6Pvm8mZFZxaKMaacXqKTJ0NRSKKO19o7msQ%2526sig%253DCg0ArKJSzJcbUZ8eN2IB%2526urlfix%253D1%2526adurl%253Dhttp://adtrk.tw/IjM5%26url%3Dhttp://adtrk.tw/IjM5
-
+  strcat(file_path, request->http_uri);
   printf(file_path);
 
   //check if the file exists
