@@ -21,11 +21,11 @@ void handleRequest(char* buf, int readRet, int listener, char* response, char* p
     strcat(response, " ");
 
     if (!strcasecmp(request->http_method, "HEAD")){
-      serve_get(request, response);
+      serve_get(request, response, path);
     } 
 
     if(!strcasecmp(request->http_method, "GET")){
-    	serve_get(request, response);
+    	serve_get(request, response, path);
     }
     else if (!strcasecmp(request->http_method, "POST")) {
       	serve_post(request, response);        
@@ -50,10 +50,10 @@ char *file_ext(const char *filename) {
   return period + 1;
 }
 
-void serve_get(Request * request, char * response) {
+void serve_get(Request * request, char * response, char * path) {
 
   char header[4096];
-  char body[1000000];
+  char body[1000000]; 
 
   char file_path[1024];
 

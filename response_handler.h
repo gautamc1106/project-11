@@ -12,6 +12,6 @@
 #include "parse.h"
 #include <time.h>
 
-void handleRequest(char* ,int ,int , char* );
-void serve_get(Request* , char*);
+void handleRequest(char* ,int ,int , char*, char* );
+void serve_get(Request* , char*, char*);
 void serve_post(Request*, char*);
